@@ -77,11 +77,13 @@ def make_entry(**kws):
 
     if file_found:
         if kws['create']:
-            raise Exception('File already exist; use edit: %s' % file_found)
+            print('Error: File already exist; use edit: %s' % file_found)
+            exit()
         initialize=False
     else: # not found
         if kws['edit']:
-            raise Exception('File not found; use create: %s' % filename)
+            print('Error: File not found; use create: %s' % filename)
+            exit()
         initialize=True
 
     if initialize:
