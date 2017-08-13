@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-09T23:01:44-05:00</updated><entry><title>Print Directory Tree</title><link href="http://acrisel.github.io/posts/2017/08/print-directory-tree/" rel="alternate"></link><published>2017-08-09T23:01:44-05:00</published><updated>2017-08-09T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-09:/posts/2017/08/print-directory-tree/</id><summary type="html">&lt;div class="section" id="print-directory-tree"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-12T23:01:44-05:00</updated><entry><title>Ordered Class</title><link href="http://acrisel.github.io/posts/2017/08/ordered-class/" rel="alternate"></link><published>2017-08-12T23:01:44-05:00</published><updated>2017-08-12T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-12:/posts/2017/08/ordered-class/</id><summary type="html">&lt;div class="section" id="ordered-class"&gt;
+&lt;h2&gt;Ordered Class&lt;/h2&gt;
+&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
+&lt;h3&gt;Maintain Ordered of Fields in Class&lt;/h3&gt;
+&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;We saw many questions on the WEB regarding having Python class maintain order of its fields.  Reason being that __dict__ is dict, therefore, class doesn't register the order of the fields presented to it.&lt;/p&gt;
+&lt;p&gt;We decided to share our version of …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="ordered-class"&gt;
+&lt;h2&gt;Ordered Class&lt;/h2&gt;
+&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
+&lt;h3&gt;Maintain Ordered of Fields in Class&lt;/h3&gt;
+&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;We saw many questions on the WEB regarding having Python class maintain order of its fields.  Reason being that __dict__ is dict, therefore, class doesn't register the order of the fields presented to it.&lt;/p&gt;
+&lt;p&gt;We decided to share our version of such a class.&lt;/p&gt;
+&lt;p&gt;We use OrderedClass were we need to maintain record like structure.  Such that when we package the record, it always packages the fields in the same order.&lt;/p&gt;
+&lt;p&gt;It is also useful when comparing fields between objects.  Having fields being printed out in the same order is very useful.&lt;/p&gt;
+&lt;p&gt;Keep in mind that without using OrderedDict, object __dict__ will print in order.  However, Python does not guarantee that order.  When using OrderedDict instead, order is guaranteed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="orderedclass"&gt;
+&lt;h4&gt;OrderedClass&lt;/h4&gt;
+&lt;p&gt;Using metaclass features of Python we can simply override __prepare__ returning OrderedDict object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OrderedClassMeta&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nd"&gt;@classmethod&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__prepare__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bases&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwds&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;OrderedDict&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OrderedClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;metaclass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;OrderedClassMeta&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="example-use"&gt;
+&lt;h4&gt;Example use&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To use, we just inherent from OrderedClass instead of object.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;OrderedClass&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;B&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;OrderedClass&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="examine-output"&gt;
+&lt;h4&gt;Examine Output&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Printing the dictionaries of the above examples.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__dict__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="vm"&gt;__dict__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h4&gt;References&lt;/h4&gt;
+&lt;p&gt;Python &lt;a class="reference external" href="http://legacy.python.org/dev/peps/pep-0520/"&gt;PEP 520&lt;/a&gt;&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Visit us at our &lt;a class="reference external" href="http://www.acrisel.com"&gt;home&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="Metadata"></category><category term="Class"></category><category term="Trick"></category><category term="Tip"></category></entry><entry><title>Print Directory Tree</title><link href="http://acrisel.github.io/posts/2017/08/print-directory-tree/" rel="alternate"></link><published>2017-08-09T23:01:44-05:00</published><updated>2017-08-09T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-09:/posts/2017/08/print-directory-tree/</id><summary type="html">&lt;div class="section" id="print-directory-tree"&gt;
 &lt;h2&gt;Print Directory Tree&lt;/h2&gt;
 &lt;div class="section" id="mimicking-linux-tree-utility"&gt;
 &lt;h3&gt;Mimicking Linux Tree Utility&lt;/h3&gt;
@@ -155,7 +250,10 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;div class="section" id="references"&gt;
 &lt;h4&gt;References&lt;/h4&gt;
 &lt;p&gt;ptree.py can be download from &lt;a class="reference external" href="https://github.com/Acrisel/references/edit/master/osutils/ptree.py"&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Visit us at our &lt;a class="reference external" href="http://www.acrisel.com"&gt;home&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -174,7 +272,10 @@ Let's start with that Cobol is a great language with many features for data proc
 &lt;p&gt;So really, why to convert? There is plenty of information with conflicting advice to either stay with or move out of Cobol. Rather try to weigh in on such discussion, here are a few drivers that lead companies to consider moving on.&lt;/p&gt;
 &lt;p&gt;In reality, stay or convert is a business investment with long term vision. As such, it needs to be incorporated into your company's long-term business goals and objectives.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Continue reading&lt;/em&gt;: &lt;a class="reference external" href="http://www.acrisel.com/cobol-conversion"&gt;Thinking on Cobol Conversion&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Visit us at our &lt;a class="reference external" href="http://www.acrisel.com"&gt;home&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content><category term="Information Technology"></category><category term="Automation"></category><category term="Cobol"></category><category term="Conversion"></category><category term="Python"></category></entry><entry><title></title><link href="http://acrisel.github.io/posts/2017/07/welcome-all/" rel="alternate"></link><published>2017-07-09T10:20:00-05:00</published><updated>2017-07-09T18:40:00-05:00</updated><author><name>The Acrisel Team</name></author><id>tag:acrisel.github.io,2017-07-09:/posts/2017/07/welcome-all/</id><summary type="html">&lt;p class="first last"&gt;Short version for index and feeds&lt;/p&gt;
