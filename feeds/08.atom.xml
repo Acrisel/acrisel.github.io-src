@@ -104,7 +104,7 @@
 Drawing from those examples, we built our version.  The primary drivers were:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Compatability with Python3&lt;/li&gt;
+&lt;li&gt;Compatibility with Python3&lt;/li&gt;
 &lt;li&gt;Print symbolic links&lt;/li&gt;
 &lt;li&gt;Limit depth of tree&lt;/li&gt;
 &lt;/ol&gt;
@@ -113,8 +113,13 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;div class="section" id="function-code"&gt;
 &lt;h4&gt;Function Code&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;I will refrain from going over the …&lt;/dt&gt;&lt;/dl&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="print-directory-tree"&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7 …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="print-directory-tree"&gt;
 &lt;h2&gt;Print Directory Tree&lt;/h2&gt;
 &lt;div class="section" id="mimicking-linux-tree-utility"&gt;
 &lt;h3&gt;Mimicking Linux Tree Utility&lt;/h3&gt;
@@ -124,7 +129,7 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 Drawing from those examples, we built our version.  The primary drivers were:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Compatability with Python3&lt;/li&gt;
+&lt;li&gt;Compatibility with Python3&lt;/li&gt;
 &lt;li&gt;Print symbolic links&lt;/li&gt;
 &lt;li&gt;Limit depth of tree&lt;/li&gt;
 &lt;/ol&gt;
@@ -133,14 +138,6 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;div class="section" id="function-code"&gt;
 &lt;h4&gt;Function Code&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;I will refrain from going over the code, otherwise self-explanatory,  except mentioning the following:&lt;/dt&gt;
-&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
-&lt;li&gt;os.walk treats symbolic links per their target.  Therefore, a symbolic link may appear in dirs and files.&lt;/li&gt;
-&lt;li&gt;only two main features of &lt;em&gt;tree&lt;/em&gt; are replicated:  accepting both a root path and depth to explore.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
  3
@@ -170,23 +167,9 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 27
 28
 29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+30&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;realname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39; joins root with path, if root is provided.&lt;/span&gt;
-&lt;span class="sd"&gt;    Then check is it is a symlink.  If it is, return a string representing the link.  Otherwise, return&lt;/span&gt;
-&lt;span class="sd"&gt;    basename or path.&lt;/span&gt;
-&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -196,12 +179,6 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ptree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;startpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;depth&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39; prints directory tree in &amp;#39;tree&amp;#39; structure.&lt;/span&gt;
-
-&lt;span class="sd"&gt;    Args:&lt;/span&gt;
-&lt;span class="sd"&gt;        startpath: root path to start&lt;/span&gt;
-&lt;span class="sd"&gt;        depth: depth of tree to print; default: -1 which signals not limit&lt;/span&gt;
-&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
     &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;startpath&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;startpath&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="n"&gt;startpath&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;startpath&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -222,11 +199,18 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
             &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{}{}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subindent&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;realname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;p&gt;I will refrain from going over the code, otherwise self-explanatory,  except mentioning the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;os.walk treats symbolic links per their target.  Therefore, a symbolic link may appear in dirs and files.&lt;/li&gt;
+&lt;li&gt;only two main features of &lt;em&gt;tree&lt;/em&gt; are replicated:  accepting both a root path and depth to explore.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="command-line-arguments"&gt;
 &lt;h4&gt;Command line Arguments&lt;/h4&gt;
+&lt;p&gt;Command line arguments is simple and self explanatory ...&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Command line arguments,&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
