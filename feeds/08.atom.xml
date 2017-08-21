@@ -389,7 +389,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="Science"></category><category term="Automation"></category><category term="Academia"></category><category term="Astrophysics"></category><category term="Research"></category><category term="Python"></category></entry><entry><title>Python Ordered Class</title><link href="http://acrisel.github.io/posts/2017/08/python-ordered-class/" rel="alternate"></link><published>2017-08-12T23:01:44-05:00</published><updated>2017-08-12T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-12:/posts/2017/08/python-ordered-class/</id><summary type="html">&lt;div class="section" id="python-ordered-class"&gt;
+</content><category term="Science"></category><category term="Automation"></category><category term="Academia"></category><category term="Astrophysics"></category><category term="Research"></category><category term="Python"></category><category term="IDL"></category></entry><entry><title>Python Ordered Class</title><link href="http://acrisel.github.io/posts/2017/08/python-ordered-class/" rel="alternate"></link><published>2017-08-12T23:01:44-05:00</published><updated>2017-08-12T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-12:/posts/2017/08/python-ordered-class/</id><summary type="html">&lt;div class="section" id="python-ordered-class"&gt;
 &lt;h2&gt;Python Ordered Class&lt;/h2&gt;
 &lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
 &lt;h3&gt;Maintain Ordered of Fields in Class&lt;/h3&gt;
