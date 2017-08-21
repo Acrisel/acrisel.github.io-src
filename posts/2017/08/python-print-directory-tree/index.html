@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Print Directory Tree</title>
+    <title>Python Print Directory Tree</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Acrisel Team">
@@ -100,8 +101,8 @@
                         <h1>
                                 <a href=""
                                         rel="bookmark"
-                                        title="Permalink to Print Directory Tree">
-                                        Print Directory Tree
+                                        title="Permalink to Python Print Directory Tree">
+                                        Python Print Directory Tree
                                 </a>
                         </h1>
                 </header>
@@ -121,12 +122,14 @@
 <span class="label">Tags</span>
 	<a href="http://acrisel.github.io/tag/os.html"><i class="icon-tag"></i>OS</a>
 	<a href="http://acrisel.github.io/tag/utilities.html"><i class="icon-tag"></i>Utilities</a>
+	<a href="http://acrisel.github.io/tag/directory.html"><i class="icon-tag"></i>Directory</a>
+	<a href="http://acrisel.github.io/tag/tree.html"><i class="icon-tag"></i>Tree</a>
 	<a href="http://acrisel.github.io/tag/linux.html"><i class="icon-tag"></i>Linux</a>
 	<a href="http://acrisel.github.io/tag/unix.html"><i class="icon-tag"></i>Unix</a>
 	<a href="http://acrisel.github.io/tag/python.html"><i class="icon-tag"></i>Python</a>
 </footer><!-- /.post-info -->                </div>
-                <div class="section" id="print-directory-tree">
-<h2>Print Directory Tree</h2>
+                <div class="section" id="print-directory-tree-with-python">
+<h2>Print Directory Tree With Python</h2>
 <div class="section" id="mimicking-linux-tree-utility">
 <h3>Mimicking Linux Tree Utility</h3>
 <div class="section" id="introduction">
@@ -139,7 +142,34 @@ Drawing from those examples, we built our version.  The primary drivers were:</p
 <li>Print symbolic links</li>
 <li>Limit depth of tree</li>
 </ol>
-</blockquote>
+<p>Example output:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">ptree</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">l</span> <span class="mi">2</span> <span class="o">/</span><span class="n">var</span>
+
+<span class="n">var</span> <span class="o">-&gt;</span> <span class="n">private</span><span class="o">/</span><span class="n">var</span><span class="o">/</span>
+<span class="o">|--</span> <span class="n">venv</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">virtualenvs</span>
+<span class="o">|--</span> <span class="n">accord</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="o">.</span><span class="n">DS_Store</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">data</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="o">.</span><span class="n">DS_Store</span>
+<span class="o">|--</span> <span class="n">acrisel</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="o">.</span><span class="n">DS_Store</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="o">|</span>   <span class="o">|--</span> <span class="n">accord</span><span class="o">/</span>
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|--</span> <span class="o">.</span><span class="n">DS_Store</span>
+</pre></div>
+</td></tr></table></blockquote>
 </div>
 <div class="section" id="function-code">
 <h4>Function Code</h4>
@@ -231,7 +261,7 @@ Drawing from those examples, we built our version.  The primary drivers were:</p
     <span class="kn">import</span> <span class="nn">argparse</span>
 
     <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;prints directory tree.&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--level&#39;</span><span class="p">,</span> <span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;depth&#39;</span><span class="p">,</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--level&#39;</span><span class="p">,</span> <span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;depth&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
                         <span class="n">help</span><span class="o">=</span><span class="s1">&#39;depth of tree to print&#39;</span><span class="p">)</span>
     <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;startpath&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                         <span class="n">help</span><span class="o">=</span><span class="s1">&#39;path to stating directory&#39;</span><span class="p">)</span>
@@ -253,6 +283,97 @@ Drawing from those examples, we built our version.  The primary drivers were:</p
 </div>
 
                 </div><!-- /.entry-content -->
+                	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+		<!--
+			<a href="http://acrisel.github.io/feeds/comment.python-print-directory-tree.atom.xml">
+				Comment Atom Feed
+			</a>
+        -->
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://acrisel.github.io/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "support";
+			CommentSystem.email_domain = "acrisel.com";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) {
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("python-print-directory-tree"));
+				}
+			);
+		});
+	</script>
+
+
         </article>
 </section>
         </div><!--/span-->
@@ -301,7 +422,7 @@ Drawing from those examples, we built our version.  The primary drivers were:</p
         <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
                    and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
 
-        <p>Copyright © 2017 <a href="http://www.acrisel.com/">Acrisel <i class="icon-external-link"></i></a></p>
+        <p>Copyright ©  <a href="http://www.acrisel.com/">Acrisel <i class="icon-external-link"></i></a></p>
       </footer>
 
     </div><!--/.fluid-container-->
