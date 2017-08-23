@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-20T09:01:44-05:00</updated><entry><title>Astrophysics Research Python Programming</title><link href="http://acrisel.github.io/posts/2017/08/astrophysics-scientific-python-programming/" rel="alternate"></link><published>2017-08-20T09:01:44-05:00</published><updated>2017-08-20T09:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-20:/posts/2017/08/astrophysics-scientific-python-programming/</id><summary type="html">&lt;div class="section" id="astrophysics-research-and-python-programming"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-22T23:12:44-05:00</updated><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-08-22T23:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="ssh-made-easy-using-python"&gt;
+&lt;h2&gt;SSH Made Easy using Python&lt;/h2&gt;
+&lt;div class="section" id="subprocess-module"&gt;
+&lt;h3&gt;Subprocess Module&lt;/h3&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;Python's subprocess module makes it easy to invoke external commands on localhost.  It can also use SSH to invoke commands on remote hosts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-simple"&gt;
+&lt;h4&gt;How simple?&lt;/h4&gt;
+&lt;p&gt;The short answer is, very simple!&lt;/p&gt;
+&lt;p&gt;The longer answer is, subprocess.run, as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3 …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="ssh-made-easy-using-python"&gt;
+&lt;h2&gt;SSH Made Easy using Python&lt;/h2&gt;
+&lt;div class="section" id="subprocess-module"&gt;
+&lt;h3&gt;Subprocess Module&lt;/h3&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;Python's subprocess module makes it easy to invoke external commands on localhost.  It can also use SSH to invoke commands on remote hosts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-simple"&gt;
+&lt;h4&gt;How simple?&lt;/h4&gt;
+&lt;p&gt;The short answer is, very simple!&lt;/p&gt;
+&lt;p&gt;The longer answer is, subprocess.run, as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ssh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;some-host@some-user&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;some-command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                        &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                        &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                        &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                        &lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prerequisites"&gt;
+&lt;h4&gt;Prerequisites&lt;/h4&gt;
+&lt;p&gt;For subprocess ssh-run to work, ssh configuration needs to be in place. This means that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;ssh-keygen on originating machine&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;ssh-copy-id to the target machine into the target account's .ssh/authorized_keys&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;optional: create .ssh/config for easier ssh call&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;optional: use &lt;em&gt;command&lt;/em&gt; in target .ssh/authorized_keys to allow proper setup, if needed.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+&lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;if [[ &lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;x${SSH_ORIGINAL_COMMAND}x&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt; != &lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;xx&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt; ]]; then source ~/.bash; eval &lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;${SSH_ORIGINAL_COMMAND}&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;; else /bin/bash --login; fi;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ssh_key&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrapper"&gt;
+&lt;h4&gt;Wrapper&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sshcmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39; Runs ssh command via subprocess.  Assuming .ssh/config is configured.&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Args:&lt;/span&gt;
+&lt;span class="sd"&gt;        host: target host to send the command to&lt;/span&gt;
+&lt;span class="sd"&gt;        command: command to run on the host&lt;/span&gt;
+&lt;span class="sd"&gt;        user: (optional) user to use to login to host&lt;/span&gt;
+&lt;span class="sd"&gt;        check: (optional) pass to *subprocess.run*; if set, checks return code&lt;/span&gt;
+&lt;span class="sd"&gt;            and raises subprocess.CalledProcessError, if none-zero result&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Returns:&lt;/span&gt;
+&lt;span class="sd"&gt;        subprocess.CompletedProcess object&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+    &lt;span class="n"&gt;where&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;@&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ssh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                           &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                           &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                           &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                           &lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# will work on if you have a host named ubly with ssh configuration&lt;/span&gt;
+    &lt;span class="n"&gt;out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sshcmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ubly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;ls -l&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;p&gt;Note the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;em&gt;check=True&lt;/em&gt; would cause subprocess.run to through &lt;em&gt;subprocess.CalledProcessError&lt;/em&gt;, if ssh exits with error code (greater than 0).&lt;/li&gt;
+&lt;li&gt;sshcmd returns &lt;em&gt;subprocess.CompletedProcess&lt;/em&gt;; which gives full access to &lt;em&gt;PIPEs&lt;/em&gt; and &lt;em&gt;return-code&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;stdout and stderr attributes are of binary form. Therefore result needs to be &lt;em&gt;decoded()&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="SSH"></category><category term="subprocess"></category><category term="distributed"></category><category term="cluster"></category></entry><entry><title>Astrophysics Research Python Programming</title><link href="http://acrisel.github.io/posts/2017/08/astrophysics-scientific-python-programming/" rel="alternate"></link><published>2017-08-20T09:01:44-05:00</published><updated>2017-08-20T09:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-20:/posts/2017/08/astrophysics-scientific-python-programming/</id><summary type="html">&lt;div class="section" id="astrophysics-research-and-python-programming"&gt;
 &lt;h2&gt;Astrophysics Research and Python Programming&lt;/h2&gt;
 &lt;div class="section" id="the-productive-research"&gt;
 &lt;h3&gt;The Productive Research&lt;/h3&gt;
