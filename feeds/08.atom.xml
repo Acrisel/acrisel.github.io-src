@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 08</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/08.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-22T23:12:44-05:00</updated><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-08-22T23:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="ssh-made-easy-using-python"&gt;
-&lt;h2&gt;SSH Made Easy using Python&lt;/h2&gt;
-&lt;div class="section" id="subprocess-module"&gt;
-&lt;h3&gt;Subprocess Module&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 08</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/08.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-22T23:12:44-05:00</updated><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-08-22T23:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
+&lt;h2&gt;Subprocess Module&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
-&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
 &lt;p&gt;Python's subprocess module makes it easy to invoke external commands on localhost.  It can also use SSH to invoke commands on remote hosts.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how-simple"&gt;
-&lt;h4&gt;How simple?&lt;/h4&gt;
+&lt;h3&gt;How simple?&lt;/h3&gt;
 &lt;p&gt;The short answer is, very simple!&lt;/p&gt;
 &lt;p&gt;The longer answer is, subprocess.run, as follows:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
-3 …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="ssh-made-easy-using-python"&gt;
-&lt;h2&gt;SSH Made Easy using Python&lt;/h2&gt;
-&lt;div class="section" id="subprocess-module"&gt;
-&lt;h3&gt;Subprocess Module&lt;/h3&gt;
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="subprocess-module"&gt;
+&lt;h2&gt;Subprocess Module&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
-&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
 &lt;p&gt;Python's subprocess module makes it easy to invoke external commands on localhost.  It can also use SSH to invoke commands on remote hosts.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="how-simple"&gt;
-&lt;h4&gt;How simple?&lt;/h4&gt;
+&lt;h3&gt;How simple?&lt;/h3&gt;
 &lt;p&gt;The short answer is, very simple!&lt;/p&gt;
 &lt;p&gt;The longer answer is, subprocess.run, as follows:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -40,7 +38,7 @@
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="prerequisites"&gt;
-&lt;h4&gt;Prerequisites&lt;/h4&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;p&gt;For subprocess ssh-run to work, ssh configuration needs to be in place. This means that:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic"&gt;
@@ -64,7 +62,7 @@
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="wrapper"&gt;
-&lt;h4&gt;Wrapper&lt;/h4&gt;
+&lt;h3&gt;Wrapper&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -127,27 +125,22 @@
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</content><category term="Python"></category><category term="SSH"></category><category term="subprocess"></category><category term="distributed"></category><category term="cluster"></category></entry><entry><title>Astrophysics Research Python Programming</title><link href="http://acrisel.github.io/posts/2017/08/astrophysics-scientific-python-programming/" rel="alternate"></link><published>2017-08-20T09:01:44-05:00</published><updated>2017-08-20T09:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-20:/posts/2017/08/astrophysics-scientific-python-programming/</id><summary type="html">&lt;div class="section" id="astrophysics-research-and-python-programming"&gt;
-&lt;h2&gt;Astrophysics Research and Python Programming&lt;/h2&gt;
-&lt;div class="section" id="the-productive-research"&gt;
-&lt;h3&gt;The Productive Research&lt;/h3&gt;
+</content><category term="Python"></category><category term="SSH"></category><category term="subprocess"></category><category term="distributed"></category><category term="cluster"></category></entry><entry><title>Astrophysics Research Python Programming</title><link href="http://acrisel.github.io/posts/2017/08/astrophysics-scientific-python-programming/" rel="alternate"></link><published>2017-08-20T09:01:44-05:00</published><updated>2017-08-20T09:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-20:/posts/2017/08/astrophysics-scientific-python-programming/</id><summary type="html">&lt;div class="section" id="the-productive-research"&gt;
+&lt;h2&gt;The Productive Research&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;Recently I helped a group of astrophysicists convert a set of IDL programs to Python. This set was to classify stars by analyzing ROTSE-I and ROTSE-III data. In this insert I would share the experience of moving IDL code to python …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="astrophysics-research-and-python-programming"&gt;
-&lt;h2&gt;Astrophysics Research and Python Programming&lt;/h2&gt;
-&lt;div class="section" id="the-productive-research"&gt;
-&lt;h3&gt;The Productive Research&lt;/h3&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;Recently I helped a group of astrophysicists convert a set of IDL programs to Python. This set was to classify stars by analyzing ROTSE-I and ROTSE-III data. In this insert I would share the experience of moving IDL code to python. The insert is only attempt …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="the-productive-research"&gt;
+&lt;h2&gt;The Productive Research&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;Recently I helped a group of astrophysicists convert a set of IDL programs to Python. This set was to classify stars by analyzing ROTSE-I and ROTSE-III data. In this insert I would share the experience of moving IDL code to python. The insert is only attempt to cover interesting aspects that we encountered. At the same time, it serves as an encouragement to perform such migration. Python is a powerful tool. As a software architect I recognize the readability of Python programs, the vast libraries that one can tap on, and the large community that continues enrich its capabilities (scientific, WEB, network, you name it, its there).&lt;/p&gt;
 &lt;p&gt;In fact, Python is being used for Data Analytics and Machine Learning; just google it around you will see many courses in the realm. So basically, with &lt;a class="reference external" href="https://docs.scipy.org/doc/numpy/index.html"&gt;scipy&lt;/a&gt;, &lt;a class="reference external" href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;, &lt;a class="reference external" href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;, &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt;, and more, one can accomplish everything done with IDL and more.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="from-idl-to-python"&gt;
-&lt;h4&gt;From IDL to Python&lt;/h4&gt;
+&lt;h3&gt;From IDL to Python&lt;/h3&gt;
 &lt;p&gt;IDL is a &amp;quot;scientific programming language used across disciplines to extract meaningful visualizations from complex numerical data. With IDL you can interpret your data, expedite discoveries, and deliver powerful applications to market.&amp;quot; It uses plenty vector and matrix computation. So we will have a lot of that with numpy computing techniques.&lt;/p&gt;
 &lt;div class="section" id="loading-fits-and-match"&gt;
-&lt;h5&gt;Loading FITS and MATCH&lt;/h5&gt;
+&lt;h4&gt;Loading FITS and MATCH&lt;/h4&gt;
 &lt;p&gt;The first we have to be able to read the ROTSE-I and ROTSE-III data files.  There were three types of files.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
@@ -229,7 +222,7 @@
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="where-statement"&gt;
-&lt;h5&gt;Where statement&lt;/h5&gt;
+&lt;h4&gt;Where statement&lt;/h4&gt;
 &lt;p&gt;IDL programs take advantage of IDL's &lt;em&gt;where_&lt;/em&gt; statement. It will look something like follows:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -276,7 +269,7 @@
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="hierarchical-record-array-initialization"&gt;
-&lt;h5&gt;Hierarchical record array initialization&lt;/h5&gt;
+&lt;h4&gt;Hierarchical record array initialization&lt;/h4&gt;
 &lt;p&gt;IDL's &lt;em&gt;create_struct_&lt;/em&gt; is being used to create records with fields accessible by name.
 It's parallel in numpy realm is &lt;a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.recarray.html"&gt;recarray&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The following code set shows how to create recarray structure with default values. Starting with the definition of the records' fields, field_map.  it is built as a list of tuple, each describe a name a field, a type, and a default value.&lt;/p&gt;
@@ -326,7 +319,7 @@ It's parallel in numpy realm is &lt;a class="reference external" href="https://d
 &lt;p&gt;This method could be extended to handle any array shape, not just vectors.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="plotting"&gt;
-&lt;h5&gt;Plotting&lt;/h5&gt;
+&lt;h4&gt;Plotting&lt;/h4&gt;
 &lt;p&gt;IDL's plot capability can be achieved using &lt;em&gt;matplotlib&lt;/em&gt; and &lt;em&gt;pandas's&lt;/em&gt; dataframe.plot. These tools are rich with features and easy to use.&lt;/p&gt;
 &lt;p&gt;The original IDL code we were porting was built creating postscript documents. Using matplotlib we switched to PDF.&lt;/p&gt;
 &lt;p&gt;Here is an example how to print few drawing per page. We start with importing and setting matpolotlib for PDF plotting.&lt;/p&gt;
@@ -386,7 +379,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="moment"&gt;
-&lt;h5&gt;Moment&lt;/h5&gt;
+&lt;h4&gt;Moment&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;moment&lt;/em&gt; is an IDL function that provides in a single call 4 statistical calculations. &lt;em&gt;moment&lt;/em&gt; returns a four-element vector containing the mean, variance, skewness, and kurtosis of the input vector.&lt;/p&gt;
 &lt;p&gt;Similar functionality can be accomplish using numpy and scipy.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -411,7 +404,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="store-and-recover"&gt;
-&lt;h4&gt;Store and Recover&lt;/h4&gt;
+&lt;h3&gt;Store and Recover&lt;/h3&gt;
 &lt;p&gt;It can be quite annoying to debug the last step in a multi-steps analytic were each step is a computation taking a long time. Well, once you pass the first step, debugging each consequent step can be annoying.&lt;/p&gt;
 &lt;p&gt;What you want to do is to keep state of the multi-step process such that data would be stored after each completed step. That will allow you to jump into the step being debugged immediately.&lt;/p&gt;
 &lt;p&gt;A simple mechanism to do that is to store the dataset at the end of each step. Before the step starts, the program can check if a result is stored for that step. If so, it recovers and skips the step.&lt;/p&gt;
@@ -501,14 +494,14 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="interesting-astrophysics-packages"&gt;
-&lt;h4&gt;Interesting astrophysics packages&lt;/h4&gt;
+&lt;h3&gt;Interesting astrophysics packages&lt;/h3&gt;
 &lt;p&gt;Through the work, we ran into two Python packages for astronomy.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.astropy.org/"&gt;Astropy&lt;/a&gt;: &amp;quot;A Community Python Library for Astronomy.&amp;quot;&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.hs.uni-hamburg.de/DE/Ins/Per/Czesla/PyA/PyA/index.html"&gt;PyAstronomy&lt;/a&gt;: &amp;quot;A collection of astronomy related packages.&amp;quot;&lt;/p&gt;
 &lt;p&gt;These packages contain plenty of easy to use functionality. However, be cautious when using in high volume processing. Not all computations may meet your need for performance. For example, we had to rewrite IDL's &lt;em&gt;SIXTY_&lt;/em&gt; instead of using an already made solution in these libraries. Only a scaled down version meet our performance needs.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="references"&gt;
-&lt;h4&gt;References&lt;/h4&gt;
+&lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.johnny-lin.com/cdat_tips/tips_array/idl2num.html"&gt;IDL to Numeric/numarray Mapping&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mathesaurus.sourceforge.net/idl-numpy.html"&gt;NumPy for IDL users&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://blog.rtwilson.com/ten-little-idl-programs-in-python/"&gt;Ten Little IDL programs in Python&lt;/a&gt;&lt;/p&gt;
@@ -517,20 +510,15 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;p&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</content><category term="Science"></category><category term="Automation"></category><category term="Academia"></category><category term="Astrophysics"></category><category term="Research"></category><category term="Python"></category><category term="IDL"></category></entry><entry><title>Python Ordered Class</title><link href="http://acrisel.github.io/posts/2017/08/python-ordered-class/" rel="alternate"></link><published>2017-08-12T23:01:44-05:00</published><updated>2017-08-12T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-12:/posts/2017/08/python-ordered-class/</id><summary type="html">&lt;div class="section" id="python-ordered-class"&gt;
-&lt;h2&gt;Python Ordered Class&lt;/h2&gt;
-&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
-&lt;h3&gt;Maintain Ordered of Fields in Class&lt;/h3&gt;
+</content><category term="Science"></category><category term="Automation"></category><category term="Academia"></category><category term="Astrophysics"></category><category term="Research"></category><category term="Python"></category><category term="IDL"></category></entry><entry><title>Python Ordered Class</title><link href="http://acrisel.github.io/posts/2017/08/python-ordered-class/" rel="alternate"></link><published>2017-08-12T23:01:44-05:00</published><updated>2017-08-12T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-12:/posts/2017/08/python-ordered-class/</id><summary type="html">&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
+&lt;h2&gt;Maintain Ordered of Fields in Class&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;We saw many questions on the WEB regarding having Python class maintain order of its fields.  Reason being that __dict__ is dict, therefore, class doesn't register the order of the fields presented to it.&lt;/p&gt;
-&lt;p&gt;We decided to share our version …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="python-ordered-class"&gt;
-&lt;h2&gt;Python Ordered Class&lt;/h2&gt;
-&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
-&lt;h3&gt;Maintain Ordered of Fields in Class&lt;/h3&gt;
+&lt;p&gt;We decided to share our version of such a …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="maintain-ordered-of-fields-in-class"&gt;
+&lt;h2&gt;Maintain Ordered of Fields in Class&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;We saw many questions on the WEB regarding having Python class maintain order of its fields.  Reason being that __dict__ is dict, therefore, class doesn't register the order of the fields presented to it.&lt;/p&gt;
 &lt;p&gt;We decided to share our version of such a class.&lt;/p&gt;
 &lt;p&gt;We use OrderedClass were we need to maintain record like structure.  Such that when we package the record, it always packages the fields in the same order.&lt;/p&gt;
@@ -538,7 +526,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;p&gt;Keep in mind that without using OrderedDict, object __dict__ will print in order.  However, Python does not guarantee that order.  When using OrderedDict instead, order is guaranteed.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="orderedclass"&gt;
-&lt;h4&gt;OrderedClass&lt;/h4&gt;
+&lt;h3&gt;OrderedClass&lt;/h3&gt;
 &lt;p&gt;Using metaclass features of Python we can simply override __prepare__ returning OrderedDict object.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -562,7 +550,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="example-use"&gt;
-&lt;h4&gt;Example use&lt;/h4&gt;
+&lt;h3&gt;Example use&lt;/h3&gt;
 &lt;p&gt;To use, we just inherent from OrderedClass instead of object.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -586,7 +574,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="examine-output"&gt;
-&lt;h4&gt;Examine Output&lt;/h4&gt;
+&lt;h3&gt;Examine Output&lt;/h3&gt;
 &lt;p&gt;Printing the dictionaries of the above examples.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -604,7 +592,7 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="references"&gt;
-&lt;h4&gt;References&lt;/h4&gt;
+&lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;Python &lt;a class="reference external" href="http://legacy.python.org/dev/peps/pep-0520/"&gt;PEP 520&lt;/a&gt;&lt;/p&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/div&gt;
@@ -612,13 +600,10 @@ Assuming that data is a list of tuples (title, values), we&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</content><category term="Python"></category><category term="Metadata"></category><category term="Class"></category><category term="Ordered"></category><category term="Trick"></category><category term="Tip"></category></entry><entry><title>Python Print Directory Tree</title><link href="http://acrisel.github.io/posts/2017/08/python-print-directory-tree/" rel="alternate"></link><published>2017-08-09T23:01:44-05:00</published><updated>2017-08-09T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-09:/posts/2017/08/python-print-directory-tree/</id><summary type="html">&lt;div class="section" id="print-directory-tree-with-python"&gt;
-&lt;h2&gt;Print Directory Tree With Python&lt;/h2&gt;
-&lt;div class="section" id="mimicking-linux-tree-utility"&gt;
-&lt;h3&gt;Mimicking Linux Tree Utility&lt;/h3&gt;
+</content><category term="Python"></category><category term="Metadata"></category><category term="Class"></category><category term="Ordered"></category><category term="Trick"></category><category term="Tip"></category></entry><entry><title>Python Print Directory Tree</title><link href="http://acrisel.github.io/posts/2017/08/python-print-directory-tree/" rel="alternate"></link><published>2017-08-09T23:01:44-05:00</published><updated>2017-08-09T23:01:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-09:/posts/2017/08/python-print-directory-tree/</id><summary type="html">&lt;div class="section" id="mimicking-linux-tree-utility"&gt;
+&lt;h2&gt;Mimicking Linux Tree Utility&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;Many blogs are showing how to print directory tree using Python.
 Drawing from those examples, we built our version.  The primary drivers were:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -632,12 +617,15 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
  2
  3
  4
- 5 …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="print-directory-tree-with-python"&gt;
-&lt;h2&gt;Print Directory Tree With Python&lt;/h2&gt;
-&lt;div class="section" id="mimicking-linux-tree-utility"&gt;
-&lt;h3&gt;Mimicking Linux Tree Utility&lt;/h3&gt;
+ 5
+ 6
+ 7
+ 8
+ 9
+10 …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="mimicking-linux-tree-utility"&gt;
+&lt;h2&gt;Mimicking Linux Tree Utility&lt;/h2&gt;
 &lt;div class="section" id="introduction"&gt;
-&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;Many blogs are showing how to print directory tree using Python.
 Drawing from those examples, we built our version.  The primary drivers were:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -676,7 +664,7 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="function-code"&gt;
-&lt;h4&gt;Function Code&lt;/h4&gt;
+&lt;h3&gt;Function Code&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -748,7 +736,7 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="command-line-arguments"&gt;
-&lt;h4&gt;Command line Arguments&lt;/h4&gt;
+&lt;h3&gt;Command line Arguments&lt;/h3&gt;
 &lt;p&gt;Command line arguments is simple and self explanatory ...&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -776,12 +764,11 @@ Drawing from those examples, we built our version.  The primary drivers were:&lt
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="references"&gt;
-&lt;h4&gt;References&lt;/h4&gt;
+&lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;ptree.py can be download from &lt;a class="reference external" href="https://github.com/Acrisel/references/edit/master/osutils/ptree.py"&gt;github&lt;/a&gt;&lt;/p&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Give us your feedback: &lt;a class="reference external" href="mailto:support&amp;#64;acrisel.com"&gt;support&amp;#64;acrisel.com&lt;/a&gt;&lt;/div&gt;
 &lt;div class="line"&gt;Visit us at our &lt;a class="reference external" href="http://www.acrisel.com"&gt;home&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
