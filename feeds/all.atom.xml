@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-22T23:12:44-05:00</updated><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-08-22T23:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-08-27T17:12:44-05:00</updated><entry><title>Pelican Post Template Controls</title><link href="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" rel="alternate"></link><published>2017-08-27T17:12:44-05:00</published><updated>2017-08-27T17:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-27:/posts/2017/08/pelican-post-template-controls/</id><summary type="html">&lt;div class="section" id="how-to-selectively-show-comments-block"&gt;
+&lt;h2&gt;How to selectively show comments block&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="motivation"&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;We are using Pelican static website framework with &lt;a class="reference external" href="https://pypi.python.org/pypi/pelican-comment-system"&gt;Pelican Comment System&lt;/a&gt;. However, we wanted to disable for some of the articles …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="how-to-selectively-show-comments-block"&gt;
+&lt;h2&gt;How to selectively show comments block&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="motivation"&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;We are using Pelican static website framework with &lt;a class="reference external" href="https://pypi.python.org/pypi/pelican-comment-system"&gt;Pelican Comment System&lt;/a&gt;. However, we wanted to disable for some of the articles the ability to show comments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to"&gt;
+&lt;h3&gt;How to&lt;/h3&gt;
+&lt;p&gt;There were three elements that needed to control commnets:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add &lt;em&gt;DEFAULT_METADATA&lt;/em&gt; item named &lt;em&gt;showcomments&lt;/em&gt; to &lt;em&gt;pelicanconf.py&lt;/em&gt; :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DEFAULT_METADATA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;showcomments&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add a condition to show comments block in theme's article.html:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;showcomments&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;yes&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;{{&lt;/span&gt; &lt;span class="n"&gt;pcs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;comments_quickstart&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;support&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;acrisel.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endif&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Add &lt;em&gt;:showcomments: no&lt;/em&gt; metadata to disable comments block in any article.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2017&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;modified&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2017&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;07&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;category&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;selective&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;showcomments&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;authors&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;Acrisel&lt;/span&gt; &lt;span class="n"&gt;Team&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;selective&lt;/span&gt; &lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's it, done.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We showed here a method to dynamically control the display of comments block.  This method can be used for other content elements. Others metadata tags can be added to bother &lt;em&gt;DEFAULT_METADATA&lt;/em&gt; and articles.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/pelican-comment-system"&gt;Pelican Comment System&lt;/a&gt; by Bernhard Scheirle&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="Pelican"></category><category term="templates"></category><category term="comments"></category></entry><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-08-22T23:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
 &lt;h2&gt;Subprocess Module&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
