@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-09-13T22:55:00-05:00</updated><entry><title>SSH Pipe with Python's Subprocess and Multiprocessing</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/" rel="alternate"></link><published>2017-09-13T22:55:00-05:00</published><updated>2017-09-13T22:55:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-13:/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh-and-multiprocessing"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-09-24T20:47:00-05:00</updated><entry><title>Remote Host Accessibility</title><link href="http://acrisel.github.io/posts/2017/09/python-check-remote-host-accessibility/" rel="alternate"></link><published>2017-09-24T20:47:00-05:00</published><updated>2017-09-24T20:47:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-24:/posts/2017/09/python-check-remote-host-accessibility/</id><summary type="html">&lt;div class="section" id="how-to-check-port-on-remote-host-is-accessible"&gt;
+&lt;h2&gt;How to check port on remote host is accessible&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;This post shows how to validate remote host is accessible.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="motivation"&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;There are many solutions out there on how to check that port on a remote host is accessible. But we needed a solution that would not hang up.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="checking-remote-port"&gt;
+&lt;h3&gt;Checking …&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="how-to-check-port-on-remote-host-is-accessible"&gt;
+&lt;h2&gt;How to check port on remote host is accessible&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;This post shows how to validate remote host is accessible.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="motivation"&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;There are many solutions out there on how to check that port on a remote host is accessible. But we needed a solution that would not hang up.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="checking-remote-port"&gt;
+&lt;h3&gt;Checking Remote Port&lt;/h3&gt;
+&lt;p&gt;Here is the code that does the job:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;socket&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;port_is_open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;socket&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_connection&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;socket&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;p&gt;The check how it performs, we will use the &lt;em&gt;timeit&lt;/em&gt; function shown here:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;start_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;returned &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; in &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; seconds&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start_time&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;p&gt;The result of checking that port on a remote host is accessible, and another that is not:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port_is_open&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;192.168.1.100&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;returned&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;0.0007190704345703125&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port_is_open&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;192.168.1.70&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;returned&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;0.5032269954681396&lt;/span&gt; &lt;span class="n"&gt;seconds&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;It cannot be easier, yea?!&lt;/p&gt;
+&lt;p&gt;Note: checking a port on remote host may be impacted by many things, predominantly how busy the network is and how busy are the involved hosts.  Therefore, the timeout may need to be adjusted according to the operational environment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/socket.html"&gt;Python's socket library&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="Network"></category><category term="Distributed"></category></entry><entry><title>SSH Pipe with Python's Subprocess and Multiprocessing</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/" rel="alternate"></link><published>2017-09-13T22:55:00-05:00</published><updated>2017-09-13T22:55:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-13:/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh-and-multiprocessing"&gt;
 &lt;h2&gt;How to pass objects to remote system using SSH and Multiprocessing&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
