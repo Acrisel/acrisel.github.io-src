@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 11</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/11.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-11-15T20:47:00-06:00</updated><entry><title>Projects with Multiple Developers and Versions</title><link href="http://acrisel.github.io/posts/2017/11/manage-project-user-changes-and-versions/" rel="alternate"></link><published>2017-11-15T20:47:00-06:00</published><updated>2017-11-15T20:47:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-11-15:/posts/2017/11/manage-project-user-changes-and-versions/</id><summary type="html">&lt;div class="section" id="git-manage-developer-changes-and-project-versions"&gt;
-&lt;h2&gt;git: Manage Developer Changes and Project Versions&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 11</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/11.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-11-15T20:47:00-06:00</updated><entry><title>Manage Code Versions With git</title><link href="http://acrisel.github.io/posts/2017/11/manage-project-user-changes-and-versions/" rel="alternate"></link><published>2017-11-15T20:47:00-06:00</published><updated>2017-11-15T20:47:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-11-15:/posts/2017/11/manage-project-user-changes-and-versions/</id><summary type="html">&lt;div class="section" id="git-code-changes-and-project-versions"&gt;
+&lt;h2&gt;git: Code Changes and Project Versions&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
 &lt;p&gt;There are many ways to use git to manages changes. This insert focus is the use of git in a development environment to handle changes of multiple versions done by various developers.&lt;/p&gt;
 &lt;img alt="versions tree" class="image-process-large-photo align-right" id="version-tree" src="/images/git_multi_users_versions/git_versions_and_branches.png" /&gt;
-&lt;p&gt;Mainstream development (next version) is always done in &lt;em&gt;main&lt;/em&gt; branch …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="git-manage-developer-changes-and-project-versions"&gt;
-&lt;h2&gt;git: Manage Developer Changes and Project Versions&lt;/h2&gt;
+&lt;p&gt;Mainstream development (next version) is always done in &lt;em&gt;main&lt;/em&gt; branch. When …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="git-code-changes-and-project-versions"&gt;
+&lt;h2&gt;git: Code Changes and Project Versions&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
 &lt;p&gt;There are many ways to use git to manages changes. This insert focus is the use of git in a development environment to handle changes of multiple versions done by various developers.&lt;/p&gt;
