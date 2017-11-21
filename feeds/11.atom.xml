@@ -58,14 +58,18 @@
 &lt;p&gt;Programmers will need to be able to work on multiple versions in their sandbox. Often, they will need to retrofit fixes done on one branch into another. &lt;em&gt;git merge&lt;/em&gt; cannot be used due to the potential need to selectively apply such changes.&lt;/p&gt;
 &lt;p&gt;A developer can create multiple footprints of the same remote repository into his environment and then &lt;em&gt;git checkout&lt;/em&gt; different versions.&lt;/p&gt;
 &lt;p&gt;On any particular change, programmers will want to work in isolation from the actual branch and then merge back their changes into the version. By this, if for some reason they want to discard work, they can do so by merely removing their branch.&lt;/p&gt;
-&lt;p&gt;A developer who works on a version branch (&lt;em&gt;version-name&lt;/em&gt;) would follow this procedure:
-1. &lt;em&gt;git pull&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt;
-2. Create a local branch reflecting that branch, &lt;em&gt;v-work&lt;/em&gt;.
-3. Apply changes to &lt;em&gt;v-work&lt;/em&gt; (add and commit).&lt;/p&gt;
-&lt;p&gt;Meantime, other developers may apply changes. Therefore, when ready to push changes:
-4. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git pull&lt;/em&gt; changes.
-5. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;v-work&lt;/em&gt; and &lt;em&gt;git merge&lt;/em&gt; with &lt;em&gt;version-name&lt;/em&gt; (use &lt;em&gt;mergetool&lt;/em&gt; on conflicts.)
-6. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git merge --squash&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A developer who works on a version branch (&lt;em&gt;version-name&lt;/em&gt;) would follow this procedure:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;em&gt;git pull&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Create a local branch reflecting that branch, &lt;em&gt;v-work&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Apply changes to &lt;em&gt;v-work&lt;/em&gt; (add and commit).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Meantime, other developers may apply changes. Therefore, when ready to push changes:&lt;/p&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;&lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git pull&lt;/em&gt; changes.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;v-work&lt;/em&gt; and &lt;em&gt;git merge&lt;/em&gt; with &lt;em&gt;version-name&lt;/em&gt; (use &lt;em&gt;mergetool&lt;/em&gt; on conflicts.)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git merge --squash&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="conclusion"&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;
