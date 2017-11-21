@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 11</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/11.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-11-15T20:47:00-06:00</updated><entry><title>Projects with Multiple Developers and Versions</title><link href="http://acrisel.github.io/posts/2017/11/manage-project-user-changes-and-versions/" rel="alternate"></link><published>2017-11-15T20:47:00-06:00</published><updated>2017-11-15T20:47:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-11-15:/posts/2017/11/manage-project-user-changes-and-versions/</id><summary type="html">&lt;div class="section" id="git-manage-developer-changes-and-project-versions"&gt;
+&lt;h2&gt;git: Manage Developer Changes and Project Versions&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;There are many ways to use git to manages changes. This insert focus is the use of git in a development environment to handle changes of multiple versions done by various developers.&lt;/p&gt;
+&lt;img alt="versions tree" class="image-process-large-photo align-right" id="version-tree" src="/images/git_multi_users_versions/git_versions_and_branches.png" /&gt;
+&lt;p&gt;Mainstream development (next version) is always done in &lt;em&gt;main&lt;/em&gt; branch …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="git-manage-developer-changes-and-project-versions"&gt;
+&lt;h2&gt;git: Manage Developer Changes and Project Versions&lt;/h2&gt;
+&lt;div class="section" id="synopsis"&gt;
+&lt;h3&gt;Synopsis&lt;/h3&gt;
+&lt;p&gt;There are many ways to use git to manages changes. This insert focus is the use of git in a development environment to handle changes of multiple versions done by various developers.&lt;/p&gt;
+&lt;img alt="versions tree" class="image-process-large-photo align-right" id="version-tree" src="/images/git_multi_users_versions/git_versions_and_branches.png" /&gt;
+&lt;p&gt;Mainstream development (next version) is always done in &lt;em&gt;main&lt;/em&gt; branch. When next version is ready to be &lt;em&gt;freeze-d&lt;/em&gt;, a branch is created with the version symbol. A tag with version name is also created to allow pull of specific version. Applying bug fix to a version under maintenance is done on the version branch. Once ready to be published, a proper subbranch is created.&lt;/p&gt;
+&lt;p&gt;A developer that works on a version branch (&lt;em&gt;v-tag&lt;/em&gt;) would follow this procedure:
+1. Pull changes into local and create a private branch to make changes.
+2. Pull latest changes into local and merge them into private.
+3. Merge private branch into local branch and push changes.&lt;/p&gt;
+&lt;p&gt;With this methodology, development of changes in multiple version by multiple developers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="motivation"&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;Developers constantly apply changes to project code base. If they don't, they are not doing their job. These changes are either driven by new or change in requirements or by bug fix. Project management together with users and programmers agrees on phases and scope for their project. These phases and scope define project versions and releases.&lt;/p&gt;
+&lt;p&gt;It is common to have a development team supported multiple phases of a project at the same time. One phase is in production (or public release); bug fixes to issues reported by users are deployed here. Another phase is testing; this phase would be released next; fixes to issues reported by testers are deployed here. Yet another phase is developing the next phase that would be released to test.&lt;/p&gt;
+&lt;p&gt;It is also common to have much more than three phases being maintained at the same time. Fixes to issues in one phase also may be needed to be retrofitted into other phases.&lt;/p&gt;
+&lt;p&gt;Using git in our projects, we needed a simple methodology to have developers manage changes and versions.  This method, although expressed in git terms, can be used with any other version control system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="introduction"&gt;
+&lt;h3&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;This insert describes how to manage versions and development with &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt;. The management of version content (scope) is beyond the scope of this insert.&lt;/p&gt;
+&lt;p&gt;To discuss code versions we have to invoke product life-cycle. Regardless to project methodology to manage life-cycle (e.g., agile), product life involves requirements, design, development, test, and run. Each of its parts is a world by itself. For example, the development team will have its version of tests. That test life-cycle itself may include unit-test, and integration-test, system-test.&lt;/p&gt;
+&lt;p&gt;The development team creates and manages the code base of a project. It needs a way to manage the scope of changes as it relates to product life-cycle. The scope may include new features (e.g., the first version contains only new features), bug-fixes, or any combination of new or enhanced features and bug-fixes. That is where versions come to rescue. Product scope is mapped into versions. Every part of the life-cycle may have a different version of the product.&lt;/p&gt;
+&lt;p&gt;Obviously, life-cycle of large-scale software products is much more complicated then as described above. One reason is that large products are split into smaller functional projects that have their one life-cycle. The final product is a mash of those smaller projects bundled together in harmony (which is not simple to achieve as any conductor would testify). Another reason is the pressure from stakeholders (users and such) to push new features, enhancements, and fixes rapidly.&lt;/p&gt;
+&lt;p&gt;If at all, this plays back into the need to have a good version management and development tools to apply it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="version-management"&gt;
+&lt;h3&gt;Version Management&lt;/h3&gt;
+&lt;p&gt;Version management is a combination of methodology and tools that in one end would define the scope of versions and on the other end would let programmers and administrator manage code. Figure &lt;a class="reference internal" href="#version-tree"&gt;version tree&lt;/a&gt; shows a simple example of how versions may be handled in &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Software project initial phase is the simplest, at the beginning, there are only requirements. Programmers would work on &lt;em&gt;main&lt;/em&gt; branch developing initial scope, the first version of the product. Once mature, the product moves to the next stage, test. At the same time of the product is being tested, programmers would have a new scope of requirements.&lt;/p&gt;
+&lt;p&gt;At that point, of delivery to test, there are two versions of the product being handled. Programmers continue to develop next version of the product. They also continue to maintain the version which was just delivered to test. Bugs found in test need to be fixed in both versions. New features would go into development version.&lt;/p&gt;
+&lt;p&gt;Programmers will use a code management system to access to multiple versions of code. In our example, &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt; is used. At the time of maturity, version administrator will freeze the code by tagging with a new version name (like v1.0 as in &lt;a class="reference internal" href="#version-tree"&gt;version tree&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The administrator will create a branch reflecting that tag. When programmers develop new features, main branch would be their friend. Checkin and checkout would be done to the main branch. When programmers work on bug fix to earlier versions, &lt;em&gt;checkout&lt;/em&gt; and &lt;em&gt;checkin&lt;/em&gt; to the appropriate version branch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="administrator-perspective"&gt;
+&lt;h3&gt;Administrator Perspective&lt;/h3&gt;
+&lt;p&gt;A version administrator would use &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt; to freeze version once mature for delivery. Freezing a version would be done with either branch or tag. We use &lt;em&gt;branch&lt;/em&gt; in major and subversions. &lt;em&gt;Tag&lt;/em&gt; is used to a critical fix that needs to be delivered in an immediate time-frame.&lt;/p&gt;
+&lt;p&gt;There are other ways to manage versions with &lt;em&gt;branches&lt;/em&gt; and &lt;em&gt;tags&lt;/em&gt;. For example, a small project may start freezing code using &lt;em&gt;tags&lt;/em&gt;. If a new fix needs to be pushed to an earlier version, only then, a branch would be created from the &lt;em&gt;tag&lt;/em&gt; of that version.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Before creating branch &lt;em&gt;git checkout main&lt;/em&gt; to make sure new branch is created from &lt;em&gt;main&lt;/em&gt;. If a sub-version is created, &lt;em&gt;checkout version-name&lt;/em&gt; to ensure the sub-branch is created from the right version.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;git checkout -b version-name&lt;/em&gt; would create new branch of of existing &lt;em&gt;checkout&lt;/em&gt; branch.&lt;/li&gt;
+&lt;li&gt;or, &lt;em&gt;git tag -a version-name -m version-name&lt;/em&gt; would create a tag reflecting the version and branch.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;git push origin version-name&lt;/em&gt; will push the newly created version to a remote repository.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note, it is advisable for version administrator to create reports which will provide insight to versions and tags in repositories. Often enough a rogue &lt;em&gt;branch&lt;/em&gt; or &lt;em&gt;tag&lt;/em&gt; will find their way to the repository. To prevent confusion, periodical cleanup of unnecessary &lt;em&gt;branches&lt;/em&gt; and tags would increase repository performance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="programmer-perspective"&gt;
+&lt;h3&gt;Programmer Perspective&lt;/h3&gt;
+&lt;p&gt;Programmers will need to be able to work on multiple versions in their sandbox. Often, they will need to retrofit fixes done on one branch into another. &lt;em&gt;git merge&lt;/em&gt; cannot be used due to the potential need to selectively apply such changes.&lt;/p&gt;
+&lt;p&gt;A developer can create multiple footprints of the same remote repository into his environment and then &lt;em&gt;git checkout&lt;/em&gt; different versions.&lt;/p&gt;
+&lt;p&gt;On any particular change, programmers will want to work in isolation from the actual branch and then merge back their changes into the version. By this, if for some reason they want to discard work, they can do so by merely removing their branch.&lt;/p&gt;
+&lt;p&gt;A developer who works on a version branch (&lt;em&gt;version-name&lt;/em&gt;) would follow this procedure:
+1. &lt;em&gt;git pull&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt;
+2. Create a local branch reflecting that branch, &lt;em&gt;v-work&lt;/em&gt;.
+3. Apply changes to &lt;em&gt;v-work&lt;/em&gt; (add and commit).&lt;/p&gt;
+&lt;p&gt;Meantime, other developers may apply changes. Therefore, when ready to push changes:
+4. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git pull&lt;/em&gt; changes.
+5. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;v-work&lt;/em&gt; and &lt;em&gt;git merge&lt;/em&gt; with &lt;em&gt;version-name&lt;/em&gt; (use &lt;em&gt;mergetool&lt;/em&gt; on conflicts.)
+6. &lt;em&gt;git checkout&lt;/em&gt; &lt;em&gt;version-name&lt;/em&gt; and &lt;em&gt;git merge --squash&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Branches&lt;/em&gt; and &lt;em&gt;tags&lt;/em&gt; are great tools to manage versions in &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt;. Just use them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;git: &lt;a class="reference external" href="https://git-scm.com/"&gt;git scm&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="git"></category><category term="version"></category><category term="multiple"></category><category term="develop"></category><category term="program"></category><category term="scope"></category><category term="project"></category></entry></feed>

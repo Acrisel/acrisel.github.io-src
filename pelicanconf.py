@@ -26,7 +26,7 @@ OUTPUT_PATH = 'output'
 PATH = 'content'
 PLUGIN_PATHS = ["plugins",]
 PLUGINS = [
-    #'better_figures_and_images',
+    # 'better_figures_and_images',
     'extract_toc',
     'summary',
     'optimize_images',
@@ -36,7 +36,6 @@ PLUGINS = [
     'pelican_comment_system',
     'i18n_subsites',
     'share_post',
-    #'image_process',
     'minchin.pelican.plugins.image_process',
            ]
 
@@ -70,6 +69,10 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+# better images
+RESPONSIVE_IMAGES = True
+FIGURE_NUMBERS = True
 
 # Blogroll
 LINKS = (
@@ -108,6 +111,7 @@ PELICAN_COMMENT_SYSTEM_IDENTICON_DATA = ('author', 'email')
 
 DISPLAY_AUTHORS_ON_SIDEBAR = True
 
+# minchin.pelican.plugins.image_process
 IMAGE_PROCESS = {
     'crisp': {'type': 'responsive-image',
               'srcset': [('1x', ["scale_in 800 600 True"]),
@@ -117,12 +121,13 @@ IMAGE_PROCESS = {
                'default': '1x',
              },
     'large-photo': {'type': 'responsive-image',
-                    'sizes': '(min-width: 1200px) 800px, (min-width: 992px) 650px, \
-                              (min-width: 768px) 718px, 100vw',
+                    'sizes': ('(min-width: 1200px) 800px,'
+                              '(min-width: 992px) 650px, '
+                              '(min-width: 768px) 718px, 100vw'),
                     'srcset': [('600w', ["scale_in 600 450 True"]),
                                ('800w', ["scale_in 800 600 True"]),
                                ('1600w', ["scale_in 1600 1200 True"]),
                                ],
-                    'default': '800w',
+                    'default': '600w',
                    },
     }

@@ -28,7 +28,7 @@ with virtualenvwrapper:
 .. code-block:: python
 
     mkvirtualenv blog
-    pip install beautifulsoup4 ghp-import Markdown pelican pysvg shovel
+    pip install beautifulsoup4 ghp-import Markdown pelican pysvg-py3 shovel pillow
 
 Project folders
 ---------------
@@ -134,7 +134,7 @@ Add {{ pcs.comments_quickstart("emailuser", "example.com") }} to article.html be
 
 Create Post
 ===========
-
+v blog
 python3 entry.py --post "Title of Article"
 
 Test
