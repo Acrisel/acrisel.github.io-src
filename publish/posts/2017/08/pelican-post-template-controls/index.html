@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+<title>Pelican Post Template Controls - Acrisel's Community Blog</title>
+<!-- Using the latest rendering mode for IE -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- https://developers.google.com/custom-search/docs/structured_data?hl=es&csw=1#microformats -->
+<!--
+<PageMap>
+<DataObject type="document">
+    <Attribute name="title">Pelican Post Template Controls</Attribute>
+    <Attribute name="author">Acrisel Team</Attribute>
+    <Attribute name="description">How to selectively show comments block Synopsis This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts. Motivation We are using Pelican static website framework with Pelican Comment System. However, we wanted to disable for some of the articles …</Attribute>
+    <Attribute name="page_count">1</Attribute>
+    <Attribute name="rating">5</Attribute>
+    <Attribute name="last_update">2017-08-27T17:12:44-05:00</Attribute>
+</DataObject>
+<DataObject type="metatags">
+    <Attribute name="category" value="08"/>
+        <Attribute name="category" value="Python"/>
+        <Attribute name="category" value="Pelican"/>
+        <Attribute name="category" value="templates"/>
+        <Attribute name="category" value="comments"/>
+</DataObject>
+-->
+<link href="http://acrisel.github.io/favicon.ico" rel="icon"/>
+<link href="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" rel="canonical"/>
+<meta content="Acrisel Team" name="author">
+<meta content="Python,Pelican,templates,comments" name="keywords">
+<meta content="How to selectively show comments block Synopsis This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts. Motivation We are using Pelican static website framework with Pelican Comment System. However, we wanted to disable for some of the articles …" name="description">
+<meta content="Acrisel's Community Blog" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="Pelican Post Template Controls" property="og:title"/>
+<meta content="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" property="og:url"/>
+<meta content="How to selectively show comments block Synopsis This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts. Motivation We are using Pelican static website framework with Pelican Comment System. However, we wanted to disable for some of the articles …" property="og:description"/>
+<meta content="2017-08-27" property="article:published_time"/>
+<meta content="08" property="article:section"/>
+<meta content="Python" property="article:tag"/>
+<meta content="Pelican" property="article:tag"/>
+<meta content="templates" property="article:tag"/>
+<meta content="comments" property="article:tag"/>
+<meta content="Acrisel Team" property="article:author"/>
+<!-- Bootstrap -->
+<link href="http://acrisel.github.io/theme/css/bootstrap.cerulean.min.css" rel="stylesheet" type="text/css">
+<link href="http://acrisel.github.io/theme/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://acrisel.github.io/theme/css/pygments/xcode.css" rel="stylesheet"/>
+<link href="http://acrisel.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet"/>
+<link href="http://acrisel.github.io/theme/css/html4css1.css" rel="stylesheet"/>
+<link href="http://acrisel.github.io/theme/css/style.css" rel="stylesheet" type="text/css">
+<link href="http://acrisel.github.io/feeds/all.atom.xml" rel="alternate" title="Acrisel's Community Blog ATOM Feed" type="application/atom+xml">
+<link href="http://acrisel.github.io/feeds/08.atom.xml" rel="alternate" title="Acrisel's Community Blog 08 ATOM Feed" type="application/atom+xml">
+</link></link></link></link></meta></meta></meta></head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://acrisel.github.io/">
+Acrisel's Community Blog            </a>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav">
+<li><a href="http://acrisel.github.io/pages/welcome-all.html">
+</a></li>
+<li>
+<a href="http://acrisel.github.io/category/about-us.html">About us</a>
+</li>
+<li>
+<a href="http://acrisel.github.io/category/11.html">11</a>
+</li>
+<li>
+<a href="http://acrisel.github.io/category/09.html">09</a>
+</li>
+<li class="active">
+<a href="http://acrisel.github.io/category/08.html">08</a>
+</li>
+<li>
+<a href="http://acrisel.github.io/category/07.html">07</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><span>
+<form action="/search.html" class="navbar-search">
+<input class="search-query" id="tipue_search_input" name="q" placeholder="Search" required="" type="text"/>
+</form></span>
+</li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+<div class="row">
+<div class="col-sm-9">
+<section id="content">
+<article>
+<header class="page-header">
+<h1>
+<a href="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" rel="bookmark" title="Permalink to Pelican Post Template Controls">
+                        Pelican Post Template Controls
+                    </a>
+</h1>
+</header>
+<div class="entry-content">
+<div class="panel">
+<div class="panel-body">
+<footer class="post-info">
+<span class="label label-default">Date</span>
+<span class="published">
+<i class="fa fa-calendar"></i><time datetime="2017-08-27T17:12:44-05:00"> Sun 27 August 2017</time>
+</span>
+<span class="label label-default">Tags</span>
+<a href="http://acrisel.github.io/tag/python.html">Python</a>
+        /
+	<a href="http://acrisel.github.io/tag/pelican.html">Pelican</a>
+        /
+	<a href="http://acrisel.github.io/tag/templates.html">templates</a>
+        /
+	<a href="http://acrisel.github.io/tag/comments.html">comments</a>
+</footer><!-- /.post-info --> </div>
+</div>
+<div class="section" id="how-to-selectively-show-comments-block">
+<h2>How to selectively show comments block</h2>
+<div class="section" id="synopsis">
+<h3>Synopsis</h3>
+<p>This post will cover how to control templates from articles. In specific, how to enable or disable comments block in posts.</p>
+</div>
+<div class="section" id="motivation">
+<h3>Motivation</h3>
+<p>We are using Pelican static website framework with <a class="reference external" href="https://pypi.python.org/pypi/pelican-comment-system">Pelican Comment System</a>. However, we wanted to disable for some of the articles the ability to show comments.</p>
+</div>
+<div class="section" id="how-to">
+<h3>How to</h3>
+<p>There were three elements that needed to control commnets:</p>
+<ol class="arabic">
+<li><p class="first">Add <em>DEFAULT_METADATA</em> item named <em>showcomments</em> to <em>pelicanconf.py</em> :</p>
+<blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DEFAULT_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'showcomments'</span> <span class="p">:</span> <span class="s1">'yes'</span><span class="p">,}</span>
+</pre></div>
+</td></tr></table></blockquote>
+</li>
+<li><p class="first">Add a condition to show comments block in theme's article.html:</p>
+<blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">article</span><span class="o">.</span><span class="n">showcomments</span> <span class="o">==</span> <span class="s2">"yes"</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{{</span> <span class="n">pcs</span><span class="o">.</span><span class="n">comments_quickstart</span><span class="p">(</span><span class="s2">"support"</span><span class="p">,</span> <span class="s2">"acrisel.com"</span><span class="p">)</span> <span class="p">}}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></blockquote>
+</li>
+<li><p class="first">Add <em>:showcomments: no</em> metadata to disable comments block in any article.</p>
+<blockquote>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">date</span><span class="p">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">09</span> <span class="mi">10</span><span class="p">:</span><span class="mi">20</span>
+<span class="p">:</span><span class="n">modified</span><span class="p">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">09</span> <span class="mi">18</span><span class="p">:</span><span class="mi">40</span>
+<span class="p">:</span><span class="n">category</span><span class="p">:</span> <span class="n">example</span>
+<span class="p">:</span><span class="n">slug</span><span class="p">:</span> <span class="n">pelican</span><span class="o">-</span><span class="n">selective</span><span class="o">-</span><span class="n">display</span><span class="o">-</span><span class="n">content</span>
+<span class="p">:</span><span class="n">showcomments</span><span class="p">:</span> <span class="n">no</span>
+<span class="p">:</span><span class="n">authors</span><span class="p">:</span> <span class="n">The</span> <span class="n">Acrisel</span> <span class="n">Team</span>
+<span class="p">:</span><span class="n">summary</span><span class="p">:</span> <span class="n">pelican</span> <span class="n">selective</span> <span class="n">display</span> <span class="n">content</span>
+</pre></div>
+</td></tr></table></blockquote>
+</li>
+</ol>
+<p>That's it, done.</p>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion</h3>
+<p>We showed here a method to dynamically control the display of comments block.  This method can be used for other content elements. Others metadata tags can be added to bother <em>DEFAULT_METADATA</em> and articles.</p>
+</div>
+<div class="section" id="references">
+<h3>References</h3>
+<blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://pypi.python.org/pypi/pelican-comment-system">Pelican Comment System</a> by Bernhard Scheirle</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<section class="well" id="post-share-links">
+<h4>Share Post:</h4>
+<p id="post-share-links">
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/&amp;title=Pelican%20Post%20Template%20Controls&amp;summary=How%20to%20selectively%20show%20comments%20block%0A%0ASynopsis%0AThis%20post%20will%20cover%20how%20to%20control%20templates%20from%20articles.%20In%20specific%2C%20how%20to%20enable%20or%20disable%20comments%20block%20in%20posts.%0A%0A%0AMotivation%0AWe%20are%20using%20Pelican%20static%20website%20framework%20with%20Pelican%20Comment%20System.%20However%2C%20we%20wanted%20to%20disable%20for%20some%20of%20the%20articles%20%E2%80%A6&amp;source=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Linkedin">Linkedin</a>
+        ❄
+        <a href="https://sharetodiaspora.github.io/?title=Pelican%20Post%20Template%20Controls&amp;url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Diaspora">Diaspora*</a>
+        ❄
+        <a href="https://twitter.com/intent/tweet?text=Pelican%20Post%20Template%20Controls&amp;url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Twitter">Twitter</a>
+        ❄
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Facebook">Facebook</a>
+        ❄
+        <a href="https://plus.google.com/share?url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Google Plus">Google+</a>
+        ❄
+        <a href="mailto:?subject=Pelican%20Post%20Template%20Controls&amp;body=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share via Email">Email</a>
+</p>
+<!--
+    <ul>
+    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/&title=Pelican%20Post%20Template%20Controls&summary=How%20to%20selectively%20show%20comments%20block%0A%0ASynopsis%0AThis%20post%20will%20cover%20how%20to%20control%20templates%20from%20articles.%20In%20specific%2C%20how%20to%20enable%20or%20disable%20comments%20block%20in%20posts.%0A%0A%0AMotivation%0AWe%20are%20using%20Pelican%20static%20website%20framework%20with%20Pelican%20Comment%20System.%20However%2C%20we%20wanted%20to%20disable%20for%20some%20of%20the%20articles%20%E2%80%A6&source=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Diaspora">linkedin*</a></li>
+    <li><a href="https://sharetodiaspora.github.io/?title=Pelican%20Post%20Template%20Controls&url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Diaspora">Diaspora*</a></li>
+    <li><a href="https://twitter.com/intent/tweet?text=Pelican%20Post%20Template%20Controls&url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Twitter">Twitter</a></li>
+    <li><a href="http://www.facebook.com/sharer/sharer.php?u=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Facebook">Facebook</a></li>
+    <li><a href="https://plus.google.com/share?url=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share on Google Plus">Google+</a></li>
+    <li><a href="mailto:?subject=Pelican%20Post%20Template%20Controls&amp;body=http%3A//acrisel.github.io/posts/2017/08/pelican-post-template-controls/" target="_blank" title="Share via Email">Email</a></li>
+    </ul
+    -->
+</section>
+<!-- /.entry-content -->
+<section class="well" id="related-posts">
+<h4>Other Posts:</h4>
+<ul>
+<li><a href="http://acrisel.github.io/posts/2017/09/python-lex-yacc-play/">Python Lex and Yacc with PLY</a></li>
+<li><a href="http://acrisel.github.io/posts/2017/07/cobol-conversion-take-1/">Cobol Conversion Take 1</a></li>
+<li><a href="http://acrisel.github.io/posts/2017/08/python-ordered-class/">Python Ordered Class</a></li>
+<li><a href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess/">SSH Pipe with Python's Subprocess</a></li>
+<li><a href="http://acrisel.github.io/posts/2017/09/python-check-remote-host-accessibility/">Remote Host Accessibility</a></li>
+</ul>
+</section>
+<a href="https://plus.google.com/111013214708506107651??rel=author"> </a>
+<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+<section id="pcs-comments">
+<header>
+<h2>Comments</h2>
+<hr/>
+</header>
+<p>There are no comments yet.</p>
+<section>
+<form action="#" id="pcs-comment-form">
+<legend>Add a Comment</legend>
+<input id="pcs-comment-form-input-replyto" type="hidden"/>
+<fieldset>
+<label for="pcs-comment-form-input-name">Name</label>
+<input id="pcs-comment-form-input-name" placeholder="Enter your name or nickname" type="text">
+</input></fieldset>
+<fieldset>
+<label for="pcs-comment-form-input-website">Website</label>
+<input id="pcs-comment-form-input-website" placeholder="Enter your website (optional)" type="text">
+</input></fieldset>
+<fieldset>
+<label for="pcs-comment-form-input-textarea">Your Comment</label>
+<textarea id="pcs-comment-form-input-textarea" placeholder="Your comment" rows="5" style="resize:vertical;"></textarea>
+<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+<div id="pcs-comment-form-display-replyto" style="display: none; "></div>
+</fieldset>
+<button id="pcs-comment-form-button-submit" type="submit">Post via email</button>
+<!--
+			<a href="http://acrisel.github.io/feeds/comment.pelican-post-template-controls.atom.xml">
+				Comment Atom Feed
+			</a>
+        -->
+</form>
+</section>
+</section>
+<script src="http://acrisel.github.io/theme/js/comments.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "support";
+			CommentSystem.email_domain = "acrisel.com";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) {
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("pelican-post-template-controls"));
+				}
+			);
+		});
+	</script>
+</article>
+</section>
+</div>
+<div class="col-sm-3" id="sidebar">
+<aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+<ul class="list-group list-group-flush">
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+<h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+<ul class="list-group" id="links">
+<li class="list-group-item">
+<a href="http://www.acrisel.com/" target="_blank">Acrisel</a>
+</li>
+<li class="list-group-item">
+<a href="http://www.github.com/acrisel" target="_blank">Acrisel Open Source</a>
+</li>
+<li class="list-group-item">
+<a href="http://getpelican.com/" target="_blank">Pelican</a>
+</li>
+<li class="list-group-item">
+<a href="http://python.org/" target="_blank">Python.org</a>
+</li>
+<li class="list-group-item">
+<a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a>
+</li>
+</ul>
+</li>
+<!-- End Sidebar/Links -->
+</ul>
+</section>
+<!-- End Sidebar --> </aside>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<hr/>
+<div class="row">
+<div class="col-xs-10">© 2017 Acrisel Team
+            · Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> </div>
+<div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+</div>
+</div>
+</footer>
+<script src="http://acrisel.github.io/theme/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://acrisel.github.io/theme/js/bootstrap.min.js"></script>
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://acrisel.github.io/theme/js/respond.min.js"></script>
+</body>
+</html>
