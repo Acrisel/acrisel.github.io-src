@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 08</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/08.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-09-02T16:10:00-05:00</updated><entry><title>Pelican Post Template Controls</title><link href="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" rel="alternate"></link><published>2017-08-27T17:12:44-05:00</published><updated>2017-08-27T17:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-27:/posts/2017/08/pelican-post-template-controls/</id><summary type="html">&lt;div class="section" id="how-to-selectively-show-comments-block"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog - 08</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/08.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2018-01-01T10:00:00-06:00</updated><entry><title>Pelican Post Template Controls</title><link href="http://acrisel.github.io/posts/2017/08/pelican-post-template-controls/" rel="alternate"></link><published>2017-08-27T17:12:44-05:00</published><updated>2017-08-27T17:12:44-05:00</updated><author><name>Acrisel Team</name></author><id>tag:acrisel.github.io,2017-08-27:/posts/2017/08/pelican-post-template-controls/</id><summary type="html">&lt;div class="section" id="how-to-selectively-show-comments-block"&gt;
 &lt;h2&gt;How to selectively show comments block&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -71,7 +71,7 @@
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="Python"></category><category term="Pelican"></category><category term="templates"></category><category term="comments"></category></entry><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-09-02T16:10:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
+</content><category term="Python"></category><category term="Pelican"></category><category term="templates"></category><category term="comments"></category></entry><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2018-01-01T10:00:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
 &lt;h2&gt;Subprocess Module&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -195,6 +195,14 @@
 &lt;li&gt;sshcmd returns &lt;em&gt;subprocess.CompletedProcess&lt;/em&gt;; which gives full access to &lt;em&gt;PIPEs&lt;/em&gt; and &lt;em&gt;return-code&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;stdout and stderr attributes are of binary form. Therefore result needs to be &lt;em&gt;decoded()&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;source code: &lt;a class="reference external" href="https://github.com/Acrisel/sshpipe"&gt;sshpipe&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2017-11-15T20:47:00-06:00</updated><entry><title>Manage Code Versions With git</title><link href="http://acrisel.github.io/posts/2017/11/manage-project-user-changes-and-versions/" rel="alternate"></link><published>2017-11-15T20:47:00-06:00</published><updated>2017-11-15T20:47:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-11-15:/posts/2017/11/manage-project-user-changes-and-versions/</id><summary type="html">&lt;div class="section" id="code-changes-and-project-versions"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Acrisel's Community Blog</title><link href="http://acrisel.github.io/" rel="alternate"></link><link href="http://acrisel.github.io/feeds/all.atom.xml" rel="self"></link><id>http://acrisel.github.io/</id><updated>2018-01-01T10:00:00-06:00</updated><entry><title>Manage Code Versions With git</title><link href="http://acrisel.github.io/posts/2017/11/manage-project-user-changes-and-versions/" rel="alternate"></link><published>2017-11-15T20:47:00-06:00</published><updated>2017-11-15T20:47:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-11-15:/posts/2017/11/manage-project-user-changes-and-versions/</id><summary type="html">&lt;div class="section" id="code-changes-and-project-versions"&gt;
 &lt;h2&gt;Code Changes and Project Versions&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -175,7 +175,7 @@
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="Python"></category><category term="Network"></category><category term="Distributed"></category></entry><entry><title>SSH Pipe with Python's Subprocess and Multiprocessing</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/" rel="alternate"></link><published>2017-09-13T22:55:00-05:00</published><updated>2017-09-27T08:22:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-13:/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh-and-multiprocessing"&gt;
+</content><category term="Python"></category><category term="Network"></category><category term="Distributed"></category></entry><entry><title>SSH Pipe with Python's Subprocess and Multiprocessing</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/" rel="alternate"></link><published>2017-09-13T22:55:00-05:00</published><updated>2018-01-01T10:00:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-13:/posts/2017/09/ssh-pipe-with-python-subprocess_multiprocessing/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh-and-multiprocessing"&gt;
 &lt;h2&gt;How to pass objects to remote system using SSH and Multiprocessing&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -484,11 +484,12 @@
 &lt;blockquote&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;ssh namedpipes and pipes &lt;a class="reference external" href="https://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess/"&gt;post&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;source code: &lt;a class="reference external" href="https://github.com/Acrisel/sshpipe"&gt;sshpipe&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="Python"></category><category term="Subprocess"></category><category term="SSH"></category><category term="Pipe"></category><category term="pipeline"></category><category term="distributed"></category><category term="Multiprocessing"></category><category term="fdopen"></category><category term="dup"></category></entry><entry><title>SSH Pipe with Python's Subprocess</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess/" rel="alternate"></link><published>2017-09-06T12:09:00-05:00</published><updated>2017-09-06T12:09:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-06:/posts/2017/09/ssh-pipe-with-python-subprocess/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh"&gt;
+</content><category term="Python"></category><category term="Subprocess"></category><category term="SSH"></category><category term="Pipe"></category><category term="pipeline"></category><category term="distributed"></category><category term="Multiprocessing"></category><category term="fdopen"></category><category term="dup"></category></entry><entry><title>SSH Pipe with Python's Subprocess</title><link href="http://acrisel.github.io/posts/2017/09/ssh-pipe-with-python-subprocess/" rel="alternate"></link><published>2017-09-06T12:09:00-05:00</published><updated>2018-01-01T10:00:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-09-06:/posts/2017/09/ssh-pipe-with-python-subprocess/</id><summary type="html">&lt;div class="section" id="how-to-pass-objects-to-remote-system-using-ssh"&gt;
 &lt;h2&gt;How to pass objects to remote system using SSH&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -803,6 +804,7 @@ An alternative to named-pipe is a unnamed-pipe or just pipe.  It's a bit more co
 &lt;blockquote&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;ssh command: &lt;a class="reference external" href="https://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/"&gt;sshcmd&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;source code: &lt;a class="reference external" href="https://github.com/Acrisel/sshpipe"&gt;sshpipe&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
@@ -1156,7 +1158,7 @@ In some cases, we want to produce different outcomes in different compiling pass
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content><category term="Python"></category><category term="Pelican"></category><category term="templates"></category><category term="comments"></category></entry><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2017-09-02T16:10:00-05:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
+</content><category term="Python"></category><category term="Pelican"></category><category term="templates"></category><category term="comments"></category></entry><entry><title>SSH Made Easy Using Python Subprocess</title><link href="http://acrisel.github.io/posts/2017/08/ssh-made-easy-using-python/" rel="alternate"></link><published>2017-08-22T23:12:44-05:00</published><updated>2018-01-01T10:00:00-06:00</updated><author><name>Arnon Sela</name></author><id>tag:acrisel.github.io,2017-08-22:/posts/2017/08/ssh-made-easy-using-python/</id><summary type="html">&lt;div class="section" id="subprocess-module"&gt;
 &lt;h2&gt;Subprocess Module&lt;/h2&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h3&gt;Synopsis&lt;/h3&gt;
@@ -1280,6 +1282,14 @@ In some cases, we want to produce different outcomes in different compiling pass
 &lt;li&gt;sshcmd returns &lt;em&gt;subprocess.CompletedProcess&lt;/em&gt;; which gives full access to &lt;em&gt;PIPEs&lt;/em&gt; and &lt;em&gt;return-code&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;stdout and stderr attributes are of binary form. Therefore result needs to be &lt;em&gt;decoded()&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;source code: &lt;a class="reference external" href="https://github.com/Acrisel/sshpipe"&gt;sshpipe&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
